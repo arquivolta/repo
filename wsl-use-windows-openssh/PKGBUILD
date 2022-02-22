@@ -6,8 +6,8 @@
 # Maintainer: Your Name <youremail@domain.com>
 pkgname=wsl-use-windows-openssh
 pkgver=0.1.0
-pkgrel=1
-pkgdesc=""
+pkgrel=2
+pkgdesc="Fix SSH Agent by using the Windows version of OpenSSH in WSL"
 arch=('any')
 url="https://github.com/arquivolta/wsl-use-windows-openssh"
 license=('GPL2')
