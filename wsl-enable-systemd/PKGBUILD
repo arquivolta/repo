@@ -17,7 +17,7 @@ backup=()
 options=()
 source=("https://github.com/arquivolta/$pkgname/archive/refs/tags/v$pkgver.tar.gz")
 noextract=()
-sha256sums=('84d279e71482525bc5da54524b6fac7025650b3207c8bcbc285fb8113fd21265')
+sha256sums=('0f82f0b56eb92980be3c7bf6f20f63c6e3b4335bb58352e6dc4f8e5c915d4fdc')
 
 package() {
 	cd "$pkgname-$pkgver"
