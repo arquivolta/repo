@@ -1,13 +1,13 @@
 # Maintainer: Anaïs Betts <support@arquivolta.dev>
 pkgname=wsl-set-up-wsld
 pkgver=0.1.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Execute scripts on WSL distro boot"
 arch=('any')
 url="https://github.com/arquivolta/wsl-set-up-wsld"
 license=('GPL2')
-depends=(make)
-makedepends=()
+depends=(run-parts)
+makedepends=(make)
 checkdepends=()
 optdepends=()
 provides=()
