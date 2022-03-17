@@ -7,7 +7,7 @@ TO_BUILD=$(find . -maxdepth 1 -type d | grep -v -e '.git' -e '^.$')
 
 for PKG in $TO_BUILD; do
 	cd "$DIR/$PKG"
-	makepkg -sc $@
+	makepkg -dc $@
 done
 
 cd "$DIR"
