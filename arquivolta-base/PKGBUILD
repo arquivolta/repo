@@ -7,7 +7,6 @@ arch=('any')
 url="https://github.com/arquivolta/repo"
 license=('GPL2')
 depends=(
-  'base' 'base-devel'
   'git' 'zsh' 'sudo' 'docker' 'htop' 'tmux' 'go' 'vim' 'zenity'
   'wsl-enable-systemd' 'wsl-set-up-wsld' 'wsl-use-windows-openssh'
 )
