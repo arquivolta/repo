@@ -1,0 +1,49 @@
+# Maintainer: Anaïs Betts <support@arquivolta.dev>
+pkgname=wsl-hello-sudo
+pkgver=2.0.0
+pkgrel=1
+pkgdesc="Let's sudo by face recognition of Windows Hello on Windows Subsystem for Linux (WSL). It runs on both WSL 1 and WSL 2. This is a PAM module for Linux on WSL."
+arch=('x86_64')
+url="https://github.com/nullpo-head/WSL-Hello-sudo"
+license=('MIT')
+depends=(openssl sudo)
+makedepends=()
+checkdepends=()
+optdepends=()
+provides=()
+conflicts=()
+replaces=()
+backup=()
+options=()
+source=("https://github.com/nullpo-head/WSL-Hello-sudo/releases/download/v$pkgver/release.tar.gz")
+noextract=()
+sha256sums=('6b7c413c4bace9637e72e81a0d986a1f6b2e0246a2a777b54bd8e9891e6f2b63')
+
+prepare() {
+	tar -xzvf release.tar.gz
+}
+
+package() {
+	cd release
+	install -d "$pkgdir/usr/lib/wsl-hello-sudo"
+	install -m644 build/WindowsHelloBridge.exe "$pkgdir/usr/lib/wsl-hello-sudo/WindowsHelloBridge.exe"
+
+	install -d "$pkgdir/usr/lib/security"
+	install -m644 build/pam_wsl_hello.so "$pkgdir/usr/lib/security/pam_wsl_hello.so"
+
+	install -d "$pkgdir/etc/pam.d"
+	install -m644 pam-config "$pkgdir/etc/pam.d/wsl-hello"
+
+	echo "authenticator_path = /mnt/c/ProgramData/WslHelloSudo/WindowsHelloBridge.exe" > config
+	install -d "$pkgdir/etc/pam_wsl_hello"
+	install -m644 config "$pkgdir/etc/pam_wsl_hello/config"
+}
+
+post_install() {
+	mkdir -p /mnt/c/ProgramData/WslHelloSudo
+	cp /usr/lib/wsl-hello-sudo/WindowsHelloBridge.exe /mnt/c/ProgramData/WslHelloSudo
+}
+
+post_remove() {
+	[ -e /mnt/c/ProgramData/WslHelloSudo/WindowsHelloBridge.exe ] && rm -f /mnt/c/ProgramData/WslHelloSudo/WindowsHelloBridge.exe
+}
