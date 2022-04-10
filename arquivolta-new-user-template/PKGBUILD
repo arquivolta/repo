@@ -1,0 +1,25 @@
+# Maintainer: Anaïs Betts <support@arquivolta.dev>
+pkgname=arquivolta-new-user-template
+pkgver=0.0.1
+pkgrel=1
+pkgdesc="Set up new user templates for Arquivolta"
+arch=('any')
+url="https://github.com/arquivolta/new-user-template"
+license=('GPL2')
+depends=(zsh zsh-syntax-highlighting zsh-completions fzf ripgrep arquivolta-zsh-pure-prompt)
+makedepends=(make)
+checkdepends=()
+optdepends=()
+provides=()
+conflicts=()
+replaces=()
+backup=()
+options=()
+source=("https://github.com/arquivolta/$pkgname/archive/refs/tags/v$pkgver.tar.gz")
+noextract=()
+sha256sums=('569dd934e05b95ff23d92c15c53396ce9e20800efbf8bfabcfe6229abfd260e2')
+
+package() {
+	cd "$pkgname-$pkgver"
+	make DESTDIR="$pkgdir/" install
+}
