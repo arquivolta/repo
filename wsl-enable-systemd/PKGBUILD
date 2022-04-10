@@ -1,7 +1,7 @@
 # Maintainer: Anaïs Betts <support@arquivolta.dev>
 pkgname=wsl-enable-systemd
-pkgver=0.1.1
-pkgrel=2
+pkgver=0.1.2
+pkgrel=1
 pkgdesc="Enable systemd on WSL2"
 arch=('any')
 url="https://github.com/arquivolta/wsl-enable-systemd"
@@ -17,7 +17,7 @@ backup=()
 options=()
 source=("https://github.com/arquivolta/$pkgname/archive/refs/tags/v$pkgver.tar.gz")
 noextract=()
-sha256sums=('b4cb7c1b9c7c54042ebdcf713042b18128e075f1b5b7ffa2f271fc0629344f51')
+sha256sums=('54f34b55f4b796730785c2fbf91a8bc62767fedf20cbfbee2467cd32c2ed9aac')
 
 package() {
 	cd "$pkgname-$pkgver"
