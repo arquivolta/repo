@@ -4,7 +4,7 @@
 # Contributor: Daniel Greve <greve.daniel.l@gmail.com>
 
 pkgname=arquivolta-zsh-pure-prompt
-pkgver=1.20.1
+pkgver=1.22.0
 pkgrel=1
 pkgdesc='Pretty, minimal and fast ZSH prompt'
 arch=('any')
@@ -13,7 +13,7 @@ _github_url='https://github.com/sindresorhus/pure'
 license=('MIT')
 depends=('git' 'zsh')
 source=("https://github.com/sindresorhus/pure/archive/v${pkgver}.tar.gz")
-sha256sums=('d530e5a1e82cefbe76056f5263daed48dc460028934dedeecb80ba39c9087925')
+sha256sums=('b6a19630d16409550742ec4d4468112b202fcde13a82ee4f2746c8d30e2903f6')
 
 package() {
   cd "${srcdir}/pure-${pkgver}"
