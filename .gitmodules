@@ -1,0 +1,3 @@
+[submodule "wsl-xclip-xsel"]
+	path = wsl-xclip-xsel
+	url = https://github.com/arquivolta/win-bash-xclip-xsel
