@@ -1,6 +1,6 @@
 # Maintainer: Anaïs Betts <support@arquivolta.dev>
 pkgname=arquivolta-base
-pkgver=0.1.1
+pkgver=0.2.0
 pkgrel=1
 pkgdesc="Base packages for Arquivolta"
 arch=('any')
@@ -8,7 +8,7 @@ url="https://github.com/arquivolta/repo"
 license=('GPL2')
 depends=(
   'git' 'zsh' 'sudo' 'go'
-  'wsl-enable-systemd' 'wsl-set-up-wsld' 'wsl-use-windows-openssh'
+  'wsl-enable-systemd' 'wsl-set-up-wsld' 'wsl-use-windows-openssh' 'wsl-xclip-xsel'
   'arquivolta-new-user-template'
 )
 optdepends=(
