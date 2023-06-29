@@ -8,7 +8,7 @@ url="https://github.com/arquivolta/repo"
 license=('GPL2')
 depends=(
   'git' 'zsh' 'sudo' 'go'
-  'wsl-enable-systemd' 'wsl-set-up-wsld' 'wsl-use-windows-openssh' 'wsl-xclip-xsel'
+  'wsl-enable-systemd' 'wsl-use-windows-openssh' 'wsl-xclip-xsel'
   'arquivolta-new-user-template'
 )
 optdepends=(
