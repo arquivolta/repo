@@ -1,7 +1,7 @@
 # Maintainer: Anaïs Betts <support@arquivolta.dev>
 pkgname=arquivolta-base
 pkgver=0.2.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Base packages for Arquivolta"
 arch=('any')
 url="https://github.com/arquivolta/repo"
@@ -15,6 +15,5 @@ optdepends=(
   'docker: docker'
   'tmux: tmux'
   'htop: htop'
-  'zenity: zenity'
   'vim: vim'
 )
