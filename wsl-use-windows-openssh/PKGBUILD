@@ -1,6 +1,6 @@
 # Maintainer: Anaïs Betts <support@arquivolta.dev>
 pkgname=wsl-use-windows-openssh
-pkgver=0.2.0
+pkgver=0.2.1
 pkgrel=1
 pkgdesc="Fix SSH Agent by using the Windows version of OpenSSH in WSL"
 arch=('any')
@@ -17,7 +17,7 @@ backup=()
 options=()
 source=("https://github.com/arquivolta/$pkgname/archive/refs/tags/v$pkgver.tar.gz")
 noextract=()
-sha256sums=('47470f1f5bf5f3f8425d7931f0428f675829ae6a17b7bcaf409e7370615a99ee')
+sha256sums=('3292d4bc968d57a0e09970de32a6d223e3bbf970f9663df6db59a14e652a2b4a')
 
 package() {
 	cd "$pkgname-$pkgver"
